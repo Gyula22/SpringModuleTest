@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -50,12 +51,23 @@ public class SpaceShipController {
         return "result";
     }
 
-    @GetMapping(value = {"/allcrewdata"})
+  /* @GetMapping(value = {"/allcrewdata"})
     public String allCrewData(Model model) {
 
         List<Crew> CrewList = (List<Crew>) spaceCrewRepo.findAll();
         model.addAttribute("alldataofmembers", CrewList);
 
         return "allcrewdata";
+    }*/
+
+ /* @GetMapping(value = {"/allcrewdata/{name}"})
+    public String crewByShip(@PathVariable String name, Model model) {
+
+        List<SpaceShip> spaceShipList = (List<SpaceShip>) spaceShipRepo.findSByName("Nautilus");
+        model.addAttribute("alldata", spaceShipList);
+
+        return "allcrewdata";
+    }*/
     }
-}
+
+
