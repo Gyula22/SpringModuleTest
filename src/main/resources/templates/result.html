@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<div>
+    <table>
+        <tr>
+            <th>Registration Code:</th>
+            <th>Name:</th>
+            <th>Spaceship Class:</th>
+            <th>Spaceship is Active?: </th>
+        </tr>
+        <tr data-th-each="datas:${results}">
+            <td th:text="${datas.registrationCode}">Registration: </td>
+            <td th:text="${datas.name}">Name: </td>
+            <td th:text="${datas.spaceShipClass}">Spaceship Class: </td>
+            <td th:text="${datas.isActive}">Is still Actice? </td>
+        </tr>
+    </table>
+</div>
+
+
+</body>
+
+</html>
